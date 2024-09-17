@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Kolker+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Galindo&family=Kolker+Brush&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+} 
+
+
+body{
+    background-color: #edd9f8;
+}
+
+main{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Reder{
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    justify-content: center ;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+}
+
+.Titulo{
+    color: aliceblue;
+}
+
+.Imagem1{
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Lovre{
+    border-radius: 10px;
+}
+
+.Paris{
+    margin-left: 10%;
+    align-self: start;
+    display: flex;
+    font-size: 5rem;
+    font-weight: lighter;
+    font-family: "Kolker Brush" ;
+}
+
+.Card{
+    align-items: center;
+    justify-content: center;
+    font-family: "Galindo", sans-serif;
+    background-color: rgb(211, 141, 239);
+    width: 80%;
+    padding: 50px;
+    height: 100px;
+    border-radius: 10px;
+    margin-top: 50px;
+
+}
+.Card h1{
+    border-bottom: 1px black solid;
+    padding-bottom: 10px;
+}
+
+.Imagem2{
+    top: 100px;
+    margin: 100px;
+}
