@@ -9,10 +9,18 @@
 
 body{
     background-color: #edd9f8;
+    overflow: auto;
+    scrollbar-width: none;  
+    overflow-x: hidden;
+
 }
 
-main{
+body::-webkit-scrollbar {
+    display: none;                  
+}
 
+
+main{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,7 +37,13 @@ main{
 }
 
 .Titulo{
+    background-color: rgb(0, 0, 0);
     color: aliceblue;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+
 }
 
 .Imagem1{
@@ -44,32 +58,58 @@ main{
 }
 
 .Paris{
-    margin-left: 10%;
-    align-self: start;
+    justify-content: center;
+    align-items: center;
     display: flex;
     font-size: 5rem;
     font-weight: lighter;
     font-family: "Kolker Brush" ;
 }
 
-.Card{
+.Card {
+    display: flex;
+    flex-direction: column;       
     align-items: center;
     justify-content: center;
     font-family: "Galindo", sans-serif;
-    background-color: rgb(211, 141, 239);
-    width: 80%;
-    padding: 50px;
-    height: 100px;
+    background-color: rgb(237, 199, 251);
+    width: auto;
+    max-width: 80%;
+    padding: 30px 40px;           
+    height: auto;
     border-radius: 10px;
+    margin: 50px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.Card h2 {
+    margin-bottom: 20px;         
+    font-size: 1.8rem;            
+    text-align: center;           
+}
+
+.Card ul {
+    list-style-type: none;        
+    padding: 0;                   
+    margin: 0;
+}
+
+.Card li {
+    margin-bottom: 10px;         
+    font-size: 1.2rem;           
+}
+
+.Card:hover {
+    transform: scale(1.05);      
+}
+
+.footer{
     margin-top: 50px;
-
-}
-.Card h1{
-    border-bottom: 1px black solid;
-    padding-bottom: 10px;
-}
-
-.Imagem2{
-    top: 100px;
-    margin: 100px;
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
 }
