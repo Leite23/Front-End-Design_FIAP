@@ -1,115 +1,115 @@
-@import url('https://fonts.googleapis.com/css2?family=Kolker+Brush&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Galindo&family=Kolker+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
-} 
-
-
-body{
-    background-color: #edd9f8;
-    overflow: auto;
-    scrollbar-width: none;  
-    overflow-x: hidden;
+    box-sizing: border-box;
+    text-shadow: 5px 10px 10px;
+    font-family: "Averia Serif Libre";
 
 }
 
-body::-webkit-scrollbar {
-    display: none;                  
+body {
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/darksouls.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    height: 100%;
 }
 
-
-main{
+.main {
+    height: 100%;
+    justify-content: center;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
-.Reder{
-    background-color: rgb(0, 0, 0);
-    text-align: center;
-    justify-content: center ;
-    align-items: center;
-    height: 50px;
-    width: 100%;
-}
-
-.Titulo{
-    background-color: rgb(0, 0, 0);
-    color: aliceblue;
-    position: fixed;
-    width: 100%;
-    text-align: center;
-    padding: 20px;
+.img {
+    width: 30vh;
+    border-radius: 200px;
+    animation: rodar 1.5s ease-in-out infinite;
 
 }
 
-.Imagem1{
-    margin: 40px;
+.container {
+    border-radius: 20px;
+    background-color: rgb(101, 86, 82);
+    padding: 40px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    gap: 10px;
+    box-shadow: inset 0px 0px;
+    animation: moverParaCimaBaixo 3s ease-in-out infinite;
+
 }
 
-.Lovre{
-    border-radius: 10px;
+h1 {
+    cursor: none;
 }
 
-.Paris{
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    font-size: 5rem;
-    font-weight: lighter;
-    font-family: "Kolker Brush" ;
+h1:hover {
+    animation: brilharRGB 1.5s infinite alternate;
 }
 
-.Card {
-    display: flex;
-    flex-direction: column;       
-    align-items: center;
-    justify-content: center;
-    font-family: "Galindo", sans-serif;
-    background-color: rgb(237, 199, 251);
-    width: auto;
-    max-width: 80%;
-    padding: 30px 40px;           
+@keyframes brilharRGB {
+    0% {
+        color: rgb(255, 0, 0);
+        text-shadow: 0 0 10px rgb(255, 0, 0), 0 0 20px rgb(255, 0, 0), 0 0 30px rgb(255, 0, 0);
+    }
+
+    33% {
+        color: rgb(0, 255, 0);
+        text-shadow: 0 0 10px rgb(0, 255, 0), 0 0 20px rgb(0, 255, 0), 0 0 30px rgb(0, 255, 0);
+    }
+
+    66% {
+        color: rgb(0, 0, 255);
+        text-shadow: 0 0 10px rgb(0, 0, 255), 0 0 20px rgb(0, 0, 255), 0 0 30px rgb(0, 0, 255);
+    }
+
+    100% {
+        color: rgb(255, 255, 0);
+        text-shadow: 0 0 10px rgb(255, 255, 0), 0 0 20px rgb(255, 255, 0), 0 0 30px rgb(255, 255, 0);
+    }
+}
+
+@keyframes moverParaCimaBaixo {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes rodar {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+
+
+}
+
+.container img {
+    max-width: 100px;
     height: auto;
-    border-radius: 10px;
-    margin: 50px auto;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease;
 }
 
-.Card h2 {
-    margin-bottom: 20px;         
-    font-size: 1.8rem;            
-    text-align: center;           
-}
-
-.Card ul {
-    list-style-type: none;        
-    padding: 0;                   
+.container p {
     margin: 0;
-}
-
-.Card li {
-    margin-bottom: 10px;         
-    font-size: 1.2rem;           
-}
-
-.Card:hover {
-    transform: scale(1.05);      
-}
-
-.footer{
-    margin-top: 50px;
-    background-color: rgb(0, 0, 0);
-    color: aliceblue;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    padding: 20px;
 }
